@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.dnyana.recipebook"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.google.android.material:material:1.0.0-beta01'
+    implementation 'android.arch.persistence.room:runtime:1.0.0'
+    implementation 'com.elmargomez.typer:typerlib:1.0.0'
+    implementation 'com.rhexgomez.typer:typer-roboto:2.0.0'
+
+    annotationProcessor 'android.arch.persistence.room:compiler:1.0.0'
+    implementation 'com.squareup.picasso:picasso:2.4.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'com.android.volley:volley:1.1.1' //Volley
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0' //Card View
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.3.0' //get Glide
+    implementation 'com.github.medyo:android-about-page:1.2.6'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+}
